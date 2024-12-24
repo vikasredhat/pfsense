@@ -207,7 +207,7 @@ install_default_kernel() {
 		cp ${CORE_PKG_ALL_PATH}/$(get_pkg_name kernel-${KERNEL_NAME}).pkg $FINAL_CHROOT_DIR/pkgs
 		if [ -n "${INSTALL_EXTRA_KERNELS}" ]; then
 			for _EXTRA_KERNEL in $INSTALL_EXTRA_KERNELS; do
-				_EXTRA_KERNEL_PATH=${CORE_PKG_ALL_PATH}/$(get_pkg_name kernel-${_EXTRA_KERNEL}).txz
+				_EXTRA_KERNEL_PATH=${CORE_PKG_ALL_PATH}/$(get_pkg_name kernel-${_EXTRA_KERNEL}).pkg
 				if [ -f "${_EXTRA_KERNEL_PATH}" ]; then
 					echo -n ". adding ${_EXTRA_KERNEL_PATH} on image /pkgs folder"
 					cp ${_EXTRA_KERNEL_PATH} $FINAL_CHROOT_DIR/pkgs
